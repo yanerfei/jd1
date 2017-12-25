@@ -1,0 +1,226 @@
+// 引入公共样式文件
+@import 'base.less';
+
+#layout {
+    max-width: 640px;
+    min-width: 320px;
+    // background-color: bisque;
+    // height: 2000px;
+    margin: 0 auto;
+}
+// 顶部区域
+#topbar {
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    height: 40px;
+    z-index: 999;
+    > a.logo {
+        width: 58px;
+        height: 23px;
+        display: block;
+        background-image: url('../images/sprites.png');
+        background-size: 200px 200px;
+        background-position: 0 -109px;
+        position: absolute;
+        top: 8px;
+        left: 10px;
+    }
+    form {
+        margin-left: 75px;
+        margin-right: 50px;
+        padding-top: 5px;
+        position: relative;
+        > i  {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top:10px;
+            left:5px;
+            background-image: url('../images/sprites.png');
+            background-size: 200px 200px;
+            background-position: -58px -109px;
+        }
+        > input {
+            height: 30px;
+            border-radius: 15px;
+            width: 100%;
+            font-size: 12px;
+            padding-left: 30px;
+        }
+    }
+    >a {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        color: #fff;
+    }
+}
+
+// 轮播图区域
+#slide {
+    overflow: hidden;
+    position: relative;
+    > ul {
+        width:(100%*10);
+        transform: translateX(-10%);
+        overflow: hidden;
+        li {
+            float: left;
+            width: 10%;
+            > a {
+
+                display: block;
+                > img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    > ol {
+        position: absolute;
+        bottom: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        > li {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            float: left;
+            margin-left: 8px;
+            &.active {
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+// 导航栏部分
+#nav {
+    padding-top: 10px;
+    background-color: #fff;
+    > ul {
+        > li {
+            width: 25%;
+            float: left;
+            > a {
+                display: block;
+                text-align: center;
+                >img {
+                    width: 40px;
+                    height: 40px;
+                }
+                > p {
+                    font-size: 12px;
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+}
+
+// 掌上秒杀
+#seckill {
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 5px;
+    .seckill-heading {
+        border-bottom: 1px solid #ccc;
+        line-height: 30px;        
+        > i {
+            width: 20px;
+            height: 25px;
+            float: left;
+            display: inline-block;
+            background-image: url('../images/seckill-icon.png');
+            background-size: 20px 25px;
+        }
+        > p {
+            margin: 0 10px;
+            color: @main-color;
+        }
+        .seckill-count-down {
+            float: left;
+            > span {
+                width: 12px;
+                height: 15px;
+                display: inline-block;
+                background-color: #000;
+                color: #fff;
+                text-align: center;
+                line-height: 15px;
+                &:nth-child(3n) {
+                   background-color: #fff;
+                   color: #000;
+                   width: 8px;
+                }
+            }
+        }
+    }
+    .seckill-body {
+        > ul {
+            margin-top: 20px;
+            > li {
+                width: 33.33%;
+                float: left;
+                > a {
+                    display: block;
+                    text-align: center;
+                    margin: 0 auto;
+                    font-size: 12px;
+                    > img {
+                        width: 60%;
+                    }
+                    > p {
+                        margin-top: 5px;
+                        color: @main-color;
+                    }
+                }
+                & + li {
+                    border-left: 1px solid #ccc;
+                }
+            }
+        }
+    }
+}
+
+// 京东超市部分
+.jd-market {
+    margin-top: 10px;
+    background-color: #fff;
+    
+    .jd-market-heading {
+        border: 1px solid #ccc;
+        > h4 {
+            line-height: 30px;
+            font-weight: normal;
+            margin-left: 20px;
+            position: relative;
+            &::before {
+                content: "";
+                // display: inline-block;
+                width: 3px;
+                height: 15px;
+                background-color: @main-color;
+                position: absolute;
+                top: 8px;
+                left: -10px;
+            }
+        }
+    }
+    .jd-market-body {
+        > ul {
+            > li {
+                float: left;
+                width: 50%;
+                > a {
+                    display: block;
+                    > img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

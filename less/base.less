@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*  清除移动端点击（按住）高亮颜色 */
+    -webkit-tap-highlight-color: transparent;
+}
+@main-color:#f23030;
+a {
+    text-decoration: none;  
+    color: #666; 
+}
+ul,li {
+    list-style: none;
+}
+i,em {
+    font-style: normal;
+}
+input {
+    border: 0;
+    outline: none;
+}
+img {
+    vertical-align: middle;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+// 公共样式
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.w50 {
+    width: 50%;
+}
+.bl {
+    border-left: 1px solid #ccc;
+}
+.br {
+    border-right: 1px solid #ccc;
+}
+.bt {
+    border-top: 1px solid #ccc;
+}
+.bb {
+    border-bottom: 1px solid #ccc;
+}

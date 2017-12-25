@@ -1,0 +1,109 @@
+@import 'base.less';
+
+// 顶部通栏
+#topbar {
+    position: relative;
+    padding: 5px;
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+    > a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        background-image: url('../images/sprites.png');
+        background-size: 200px 200px;
+         /*改变背景图的定位的起点 让箭头从内容区域开始*/
+        background-origin: content-box;
+         /* 背景图裁切 裁切掉内容区域以外的背景图 */
+        background-clip: content-box;
+        position: absolute;        
+    }
+    >.icon-back {
+        background-position: -20px 0;
+        left: 0;
+        top: 0;
+    }
+    > form {
+        margin-left: 40px;
+        margin-right: 40px;
+        > input {
+            height: 30px;
+            width: 100%;
+            padding-left: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+    }
+    >.icon-menu {
+        right: 0;
+        top: 0;
+        background-position: -60px 0;
+    }
+}
+
+// 商品列表
+#category {
+    .category-left {
+        float: left;
+        > ul {
+            > li {
+                > a {
+                    display: block;
+                    width: 100px;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+                    background-color: #eee;
+                    border-bottom: 1px solid #ccc;
+                    border-right: 1px solid #ccc;
+                }
+                &.active {
+                    > a {
+                        background-color: #fff;
+                        color: @main-color;
+                    }
+                }
+            }
+        }
+    }
+    .category-right {
+        padding: 10px;
+        // 不给宽度,就不能有浮动
+        // float: right;
+        margin-left: 100px;
+        position: relative;
+        .product-list {
+            >a {
+                width: 100%;
+                display: block;
+                > img {
+                    width: 100%;
+                }
+            }
+            .product {
+                > h4 {
+                    font-size: 16px;
+                    margin: 10px 0;
+                }
+                > ul {
+                    > li {
+                        float: left;
+                        width: 33.33%;
+                        >a {
+                            display: block;
+                            text-align: center;
+                            >img {
+                                width: 50px;
+                                height: 50px;
+                            }
+                            > p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
